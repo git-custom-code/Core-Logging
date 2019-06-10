@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Logging", "Core.Loggin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Logging.Transport.InProcess", "Core.Logging.Transport.InProcess\Core.Logging.Transport.InProcess.csproj", "{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Logging.Storage.OutputWindow", "Core.Logging.Storage.OutputWindow\Core.Logging.Storage.OutputWindow.csproj", "{401F7DBE-F569-4ABB-B155-2F79726E77CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401F7DBE-F569-4ABB-B155-2F79726E77CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401F7DBE-F569-4ABB-B155-2F79726E77CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401F7DBE-F569-4ABB-B155-2F79726E77CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401F7DBE-F569-4ABB-B155-2F79726E77CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

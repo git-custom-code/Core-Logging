@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>In-process logging.</Title>
+    <Description>An ILogMessageStream/ILogMessageCaster implementation for in-process log message transport.</Description>
+    <RootNamespace>CustomCode.Core.Logging.Transport.InProcess</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CustomCode.Core.Composition" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Logging\Core.Logging.csproj" />
+  </ItemGroup>
+
+</Project>

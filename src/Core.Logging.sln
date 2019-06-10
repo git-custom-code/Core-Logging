@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DF86B1AC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Logging", "Core.Logging\Core.Logging.csproj", "{E4C622DB-24A4-48EF-A50E-37B9E97E6B81}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Logging.Transport.InProcess", "Core.Logging.Transport.InProcess\Core.Logging.Transport.InProcess.csproj", "{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{E4C622DB-24A4-48EF-A50E-37B9E97E6B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4C622DB-24A4-48EF-A50E-37B9E97E6B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4C622DB-24A4-48EF-A50E-37B9E97E6B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD0CC94-92A2-43E3-B722-DFB2D3BEEE54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

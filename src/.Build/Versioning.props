@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <SemVer>$(Version)</SemVer>
+    <InformationalVersion>$(SemVer)+build.developer</InformationalVersion>
+  </PropertyGroup>
+
+</Project>

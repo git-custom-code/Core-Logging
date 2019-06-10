@@ -1,0 +1,15 @@
+<Project>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>$(SemVer)</PackageVersion>
+    <PackageProjectUrl>https://github.com/git-custom-code/Core-Logging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/git-custom-code/Core-Logging</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>C#, Logging, Dependency Injection</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+</Project>

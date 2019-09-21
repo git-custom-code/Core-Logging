@@ -1,6 +1,8 @@
 namespace CustomCode.Core.Logging
 {
+    using CustomCode.Core.Logging.Context;
     using System;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Data transfer object that contains the data to be logged.
@@ -31,6 +33,9 @@ namespace CustomCode.Core.Logging
         /// <param name="timestamp">
         /// The timestamp (in utc) when the call to one of the methods of the <see cref="ILog"/> service was made.
         /// </param>
+        /// <param name="context">
+        /// The current log message's context (see <see cref="LogContext"/> for more details).
+        /// </param>
         /// <param name="exception"> The (optional) exception to be logged. </param>
         public LogMessage(
             string callingMethod,
@@ -40,6 +45,7 @@ namespace CustomCode.Core.Logging
             Severity severity,
             string sourceFile,
             DateTimeOffset? timestamp = null,
+            IEnumerable<object>? context = null,
             Exception? exception = null)
         {
             CallingMethod = callingMethod;
@@ -50,6 +56,7 @@ namespace CustomCode.Core.Logging
             Severity = severity;
             SourceFile = sourceFile;
             Timestamp = timestamp ?? DateTimeOffset.Now;
+            Context = context ?? AmbientContextStack.CreateSnapshot();
         }
 
         #endregion
@@ -99,6 +106,11 @@ namespace CustomCode.Core.Logging
         /// Gets the timestamp (in utc) when the call to one of the methods of the <see cref="ILog"/> service was made.
         /// </summary>
         public DateTimeOffset Timestamp { get; }
+
+        /// <summary>
+        /// Gets the current log message's context.
+        /// </summary>
+        public IEnumerable<object> Context { get; }
 
         #endregion
     }

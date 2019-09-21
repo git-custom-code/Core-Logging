@@ -1,6 +1,7 @@
 namespace CustomCode.Core.Logging
 {
     using CustomCode.Core.Composition;
+    using CustomCode.Core.Logging.Context;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -107,6 +108,7 @@ namespace CustomCode.Core.Logging
         private LogMessage CreateMessage(string message, Severity severity,
             string callingMethod, int lineNumber, string sourceFile)
         {
+            var context = AmbientContextStack.CreateSnapshot();
             var logMessage = new LogMessage(
                 callingMethod,
                 Path.GetFileNameWithoutExtension(sourceFile), // assume naming convention of only one type per file with the same name
@@ -114,7 +116,8 @@ namespace CustomCode.Core.Logging
                 message,
                 severity,
                 sourceFile,
-                DateTimeOffset.Now);
+                DateTimeOffset.Now,
+                context);
             return logMessage;
         }
 
@@ -129,6 +132,7 @@ namespace CustomCode.Core.Logging
         private LogMessage CreateMessage(Exception exception,
             string callingMethod, int lineNumber, string sourceFile)
         {
+            var context = AmbientContextStack.CreateSnapshot();
             var logMessage = new LogMessage(
                 callingMethod,
                 Path.GetFileNameWithoutExtension(sourceFile), // assume naming convention of only one type per file with the same name
@@ -137,6 +141,7 @@ namespace CustomCode.Core.Logging
                 Severity.Error,
                 sourceFile,
                 DateTimeOffset.Now,
+                context,
                 exception);
             return logMessage;
         }
